@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "270350032352",
+    "project_id": "mca-met-bot",
+    "storage_bucket": "mca-met-bot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270350032352:android:cf4e2ba825e946e1cd9f85",
+        "android_client_info": {
+          "package_name": "com.tutorialsbysajal.mcametbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270350032352-kiep7kk77r8va43lh7osadf8m4d7gj4h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tutorialsbysajal.mcametbot",
+            "certificate_hash": "b44a84e8fb1a46ae9711291726e4cbd117a6e889"
+          }
+        },
+        {
+          "client_id": "270350032352-2cb57odmsfgg2g53n1orivs1as7pjpop.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANzqj5I_K_lizIDcn2PpInaFzxXa4IgpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270350032352-2cb57odmsfgg2g53n1orivs1as7pjpop.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
