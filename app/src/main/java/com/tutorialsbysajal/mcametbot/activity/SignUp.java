@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.PatternMatcher;
 import android.view.View;
@@ -25,6 +27,11 @@ import com.tutorialsbysajal.mcametbot.modelClass.User;
 public class SignUp extends AppCompatActivity {
     Button gomanageOtp;
     CountryCodePicker cpp;
+    SharedPreferences sharedPreferences;
+    // creating constant keys for shared preferences.
+    public static final String SHARED_PREFS = "shared_prefs";
+    // key for storing email.
+    public static final String USER_KEY = "user_key";
     EditText mobileNo, name, email, studentId, department, password;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
@@ -45,6 +52,7 @@ public class SignUp extends AppCompatActivity {
         cpp.registerCarrierNumberEditText(mobileNo);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
+        sharedPreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
         // get the inputs
 //        String passwordVal = password.getText().toString();
 
@@ -59,6 +67,10 @@ public class SignUp extends AppCompatActivity {
                 String studentIdVal = studentId.getText().toString();
                 String departmentVal = department.getText().toString();
                 String numberVal = cpp.getFullNumberWithPlus();
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                // put value
+                editor.putString(USER_KEY,nameVal);
+                editor.apply();
 
                 progressDialog.show();
                 firebaseAuth.createUserWithEmailAndPassword(emailVal, passwordVal)

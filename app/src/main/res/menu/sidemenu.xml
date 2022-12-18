@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+        <item android:title="User">
+            <menu>
+
+                <item
+                    android:id="@+id/rate_us"
+                    android:title="Rate Us" />
+                <item
+                    android:id="@+id/sugFeature"
+                    android:title="Suggest a Feature" />
+                <item
+                    android:id="@+id/logOut"
+                    android:title="Log Out" />
+
+
+            </menu>
+        </item>
+    </group>
+    // 2nd menu
+    <group android:checkableBehavior="single">
+
+        <item android:title="Developer">
+            <menu>
+                <item
+                    android:id="@+id/aboutUs"
+                    android:title="About Us" />
+                <item
+                    android:id="@+id/contactUs"
+                    android:title="Contact Us" />
+                <item
+                    android:id="@+id/disclaimer"
+                    android:title="Disclaimer" />
+                <item
+                    android:id="@+id/privacy"
+                    android:title="Privacy Policy" />
+
+            </menu>
+        </item>
+    </group>
+    // 3rd menu
+    <group android:checkableBehavior="single">
+
+        <item android:title="Sharing">
+            <menu>
+                <item
+                    android:id="@+id/share"
+                    android:title="Share" />
+                <item
+                    android:id="@+id/wpshare"
+                    android:title="Share in Whatsapp" />
+
+
+            </menu>
+        </item>
+    </group>
+
+</menu>

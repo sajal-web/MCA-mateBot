@@ -46,4 +46,6 @@ dependencies {
     implementation 'androidx.browser:browser:1.3.0'
     // for material edittext
     implementation 'com.google.android.material:material:1.8.0-alpha03'
+    // gif use
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
 }

@@ -4,12 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/drawable-v24/wave.xml" value="0.137" />
+        <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/drawable/ic_person.xml" value="0.137" />
         <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/layout/activity_login2.xml" value="0.25" />
-        <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
+        <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/layout/activity_manage_otp.xml" value="0.19166666666666668" />
         <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/layout/activity_sign_up.xml" value="0.19166666666666668" />
         <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/layout/activity_splash_screen.xml" value="0.67" />
+        <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/layout/headermenu.xml" value="0.25" />
+        <entry key="..\:/android practices/MCAmetBOT/app/src/main/res/menu/sidemenu.xml" value="0.33" />
       </map>
     </option>
   </component>
