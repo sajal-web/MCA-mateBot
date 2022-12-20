@@ -10,6 +10,8 @@
     <color name="colorPrimary">#1D63C8</color>
     <color name="colorPrimaryDark">#1D63C8</color>
     <color name="colorAccent">#16ae28</color>
+    <color name="statusbar">#ffe115</color>
+    <color name="statusbar_bottom">#f5f4f6</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="AliceBlue">#F0F8FF</color>
 </resources>

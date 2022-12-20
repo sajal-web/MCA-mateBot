@@ -17,6 +17,7 @@ android {
     }
 buildFeatures{
     viewBinding true;
+    dataBinding true
 }
     buildTypes {
         release {
@@ -43,9 +44,6 @@ dependencies {
 
     // country code picker
     implementation 'com.hbb20:ccp:2.5.0'
-    implementation 'androidx.browser:browser:1.3.0'
-    // for material edittext
-    implementation 'com.google.android.material:material:1.8.0-alpha03'
-    // gif use
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+ // image slider dependency
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 }
