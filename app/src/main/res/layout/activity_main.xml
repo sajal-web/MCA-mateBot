@@ -9,24 +9,18 @@
     tools:context=".activity.MainActivity"
     tools:openDrawer="start">
 
-    <!--        <pl.droidsonroids.gif.GifImageView-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:scaleType="centerCrop"-->
-    <!--            android:src="@drawable/giphy"-->
-    <!--            />-->
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#fffefe"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffe115"
+            android:background="@color/white"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,200 +30,333 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <ScrollView
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#f5f4f6">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@color/white"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.appcompat.widget.SearchView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/home_background_gradient"
-                    android:orientation="vertical">
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/floating_background" />
 
-                    <!--                    <TextView-->
-                    <!--                        android:layout_width="match_parent"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:fontFamily="@font/archivo_black"-->
-                    <!--                        android:gravity="center"-->
-                    <!--                        android:text="Welcome Sajal"-->
-                    <!--                        android:textColor="@color/black"-->
-                    <!--                        android:textSize="18sp" />-->
-                    <androidx.appcompat.widget.SearchView
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@drawable/shadow_background" />
+                        android:layout_height="wrap_content">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="12dp"
-                        android:layout_margin="20dp">
-
-                        <LinearLayout
+                        <com.denzcoskun.imageslider.ImageSlider
+                            android:id="@+id/imageSlider"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="130dp"
+                            android:background="@drawable/shadow_background"
+                            app:iss_auto_cycle="true"
+                            app:iss_delay="1000"
+                            app:iss_period="1000" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                            <com.denzcoskun.imageslider.ImageSlider
-                                android:layout_width="match_parent"
-                                android:layout_height="130dp"
-                                android:background="@drawable/shadow_background"
-                                app:iss_period="1000"
-                                app:iss_auto_cycle="true"
-                                app:iss_delay="1000"
-                                android:id="@+id/imageSlider"/>
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_marginTop="-10dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="180dp"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/shadow_background"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="20dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginBottom="10dp"
-                                android:src="@drawable/google" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/shadow_background"
+                                android:backgroundTint="#e8f1fc"
+                                android:clickable="true"
+                                android:focusable="true"
                                 android:gravity="center"
-                                android:text="NOTICE"
-                                android:textColor="@color/black" />
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/google" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/archivo_black"
+                                    android:gravity="center"
+                                    android:text="Notice"
+                                    android:textColor="#2059af" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="30dp"
+                                android:onClick="goToAboutCollege"
+                                android:layout_weight="1"
+                                android:background="@drawable/shadow_background"
+                                android:backgroundTint="#fce8e7"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/google" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/archivo_black"
+                                    android:text="About College"
+                                    android:textColor="#a91918" />
+
+                            </LinearLayout>
+
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="180dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginEnd="30dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/shadow_background"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="20dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginBottom="10dp"
-                                android:src="@drawable/google" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                            <LinearLayout
+                                android:id="@+id/go_to_departments"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:onClick="goToDepartments"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/shadow_background"
+                                android:backgroundTint="@color/department_background"
+                                android:clickable="true"
+                                android:focusable="true"
                                 android:gravity="center"
-                                android:text="NOTICE"
-                                android:textColor="@color/black" />
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/google" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/archivo_black"
+                                    android:text="Departments"
+                                    android:textColor="#da8a19" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/shadow_background"
+                                android:backgroundTint="#e7f4ea"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/google" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/archivo_black"
+                                    android:text="Photo Gallary"
+                                    android:textColor="#157032" />
+
+                            </LinearLayout>
+
 
                         </LinearLayout>
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/shadow_background"
+                                android:backgroundTint="#f5e9fe"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/google" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/archivo_black"
+                                    android:text="Cloud Login"
+                                    android:textColor="#7028ad" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/shadow_background"
+                                android:backgroundTint="#fcefe3"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/google" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/archivo_black"
+                                    android:text="Exam Updates"
+                                    android:textColor="#bd7324" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/shadow_background"
+                                android:backgroundTint="#e5f7fa"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/google" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="NOTICE"
+                                    android:textColor="#207a83" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/shadow_background"
+                                android:backgroundTint="#fde6f2"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/google" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="NOTICE"
+                                    android:textColor="#a21468" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
 
                     </LinearLayout>
-
-                   <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="180dp"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/shadow_background"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="20dp">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginBottom="10dp"
-                                android:src="@drawable/google" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="NOTICE"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="180dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginEnd="30dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/shadow_background"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="20dp">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginBottom="10dp"
-                                android:src="@drawable/google" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="NOTICE"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-
-                    </LinearLayout>
-
-
-
-                </LinearLayout>
-
+                </ScrollView>
 
             </LinearLayout>
 
-
-        </ScrollView>
+        </LinearLayout>
 
 
         <Button
@@ -267,13 +394,12 @@
 
     </LinearLayout>
 
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
-        android:background="#f5f4f6"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="start"
+        android:background="#fffefe"
         app:headerLayout="@layout/headermenu"
         app:menu="@menu/sidemenu" />
 </androidx.drawerlayout.widget.DrawerLayout>

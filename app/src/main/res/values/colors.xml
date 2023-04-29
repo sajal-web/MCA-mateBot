@@ -14,4 +14,6 @@
     <color name="statusbar_bottom">#f5f4f6</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="AliceBlue">#F0F8FF</color>
+    // my colours
+    <color name="department_background">#fdf6de</color>
 </resources>

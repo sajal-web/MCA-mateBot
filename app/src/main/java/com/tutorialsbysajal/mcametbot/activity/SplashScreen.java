@@ -28,7 +28,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        String em = sharedPreferences.getString(EMAIL_KEY, "null");
+            String em = sharedPreferences.getString(EMAIL_KEY, "null");
 
         emul = findViewById(R.id.emul);
 

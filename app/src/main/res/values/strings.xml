@@ -1,6 +1,34 @@
 <resources>
     <string name="app_name">MCA met BOT</string>
     <string name="navigation_open">Open Navigation drawer</string>
-     <string name="navigation_close">Close Navigation drawer</string>
+    <string name="navigation_close">Close Navigation drawer</string>
+
+    <string-array name="departments">
+        <item>Bengali</item>
+        <item>Economics</item>
+        <item>Education</item>
+        <item>English</item>
+        <item>Hindi</item>
+        <item>Philosophy</item>
+        <item>Physical Education</item>
+        <item>Political Science</item>
+        <item>Sanskrit</item>
+        <item>Sociology</item>
+        <item>BCA</item>
+        <item>Botany</item>
+        <item>Chemistry</item>
+        <item>Computer Science</item>
+        <item>Electronics</item>
+        <item>Geography</item>
+        <item>Mathematics</item>
+        <item>Microbiology</item>
+        <item>Nutrition</item>
+        <item>Physics</item>
+        <item>Physiology</item>
+        <item>Statistics</item>
+        <item>Zoology</item>
+
+
+    </string-array>
 
 </resources>

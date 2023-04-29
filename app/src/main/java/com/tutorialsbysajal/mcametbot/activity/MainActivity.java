@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     public void signOut(View view) {
         FirebaseAuth.getInstance().signOut();
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -104,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
     public void initilize() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("MCAmateBot");
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         Window window = MainActivity.this.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.statusbar));
+        window.setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.white));
         getWindow().setNavigationBarColor(getResources().getColor(R.color.statusbar_bottom));
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
         drawerLayout.addDrawerListener(toggle);
@@ -132,15 +134,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public static void changeStatusBarContrastStyle(Window window, Boolean lightIcons) {
-        View decorView = window.getDecorView();
-        if (lightIcons) {
-            // Draw light icons on a dark background color
-            decorView.setSystemUiVisibility(decorView.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        } else {
-            // Draw dark icons on a light background color
-            decorView.setSystemUiVisibility(decorView.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
+
+    public void goToDepartments(View view) {
+        Intent intent = new Intent(MainActivity.this, DepartmentList.class);
+
+        startActivity(intent);
     }
 
+    public void goToAboutCollege(View view) {
+    Intent intent = new Intent(MainActivity.this,AboutCollege.class);
+    startActivity(intent);
+    }
 }
