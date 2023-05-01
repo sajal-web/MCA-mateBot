@@ -204,7 +204,7 @@
                         android:id="@+id/textOR"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="OR"
+                        android:text=" OR CONNECT WITH "
                         android:textAllCaps="true"
                         android:textColor="#807fa1"
                         android:textSize="14sp" />
@@ -225,22 +225,104 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
+                    android:orientation="vertical"
                     android:visibility="visible">
 
-                    <TextView
-                        android:id="@+id/googleText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Login with Google"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/googleText"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text="Login with Google"-->
+                    <!--                        android:textColor="#000000"-->
+                    <!--                        android:textSize="14sp" />-->
 
-                    <ImageView
-                        android:id="@+id/btn_google_login"
-                        android:layout_width="30dp"
-                        android:layout_height="30sp"
-                        android:layout_marginStart="10dp"
-                        app:srcCompat="@drawable/google" />
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/btn_google_login"-->
+                    <!--                        android:layout_width="30dp"-->
+                    <!--                        android:layout_height="30sp"-->
+                    <!--                        android:layout_marginStart="10dp"-->
+                    <!--                        app:srcCompat="@drawable/google" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/google_login_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAllCaps="false"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="2dp"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Google"
+                            android:textColor="@color/white"
+                            android:background="@drawable/google_login_background"
+                            android:drawableStart="@drawable/google"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="1.0"/>
+
+                        <Button
+                            android:id="@+id/facebook_login_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="2dp"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Facebook"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/facebook_login_background" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/github_login_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="2dp"
+                            android:text="GitHub"
+                            android:textStyle="bold"
+                            android:background="@drawable/github_login_background"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="1.0"/>
+
+                        <Button
+                            android:id="@+id/discord_login_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="LinkedIn"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="15dp"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:background="@drawable/linkedin_login_background"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1.0"/>
+
+                    </LinearLayout>
 
 
                 </LinearLayout>
