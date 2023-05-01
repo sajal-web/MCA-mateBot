@@ -137,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToDepartments(View view) {
         Intent intent = new Intent(MainActivity.this, DepartmentList.class);
-
         startActivity(intent);
     }
 
