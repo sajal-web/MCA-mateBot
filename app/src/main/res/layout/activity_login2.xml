@@ -177,6 +177,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="16dp"
+                    android:padding="10dp"
                     android:layout_marginEnd="32dp"
                     android:text="Log in"
                     android:textColor="@android:color/white"
@@ -220,7 +221,46 @@
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:padding="5dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/rounded_back"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@color/white"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/google" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Sign up with Google"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:orientation="horizontal">
@@ -234,21 +274,17 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="16dp"
                         android:gravity="center"
-                        android:background="@drawable/rounded_back"
+                        android:background="@drawable/round_bg"
                         android:visibility="visible">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:background="@color/white"
-                            android:padding="5dp"
-                            app:srcCompat="@drawable/google" />
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:id="@+id/register_now"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Sign up with Google"
+                            android:text="Create Account"
+                            android:gravity="center"
                             android:padding="10dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="14sp" />
 
 
@@ -258,33 +294,6 @@
 
                 </LinearLayout>
 
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Don't hava an account"
-                        android:textColor="#807fa1"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/register_now"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="3dp"
-                        android:text="Register Now"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
-
-
-                </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>

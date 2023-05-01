@@ -44,6 +44,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
+        View decore = LoginActivity.this.getWindow().getDecorView();
+//      decore.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        decore.setSystemUiVisibility(0);
         login_btn = findViewById(R.id.login_btn);
         register_now = findViewById(R.id.register_now);
         id_email = findViewById(R.id.id_email);
